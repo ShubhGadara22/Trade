@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video & Photo Editing - Skilify</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Skilify</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="ui-ux.html" class="nav-link">UI/UX</a></li>
+                <li><a href="graphic-design.html" class="nav-link">Graphic Design</a></li>
+                <li><a href="business-finance.html" class="nav-link">Business</a></li>
+                <li><a href="digital-marketing.html" class="nav-link">Marketing</a></li>
+                <li><a href="editing.html" class="nav-link active">Editing</a></li>
+                <li><a href="freelancing.html" class="nav-link">Freelancing</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Master Video & Photo Editing</h1>
+                <p>Learn professional video editing with Premiere Pro, create stunning effects with After Effects, and master photo editing techniques.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="startCourse('editing')">Start Course</button>
+                    <button class="btn-secondary">View Showreel</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="editing-showcase">
+                    <div class="timeline">
+                        <div class="track"></div>
+                        <div class="track"></div>
+                        <div class="track"></div>
+                        <div class="playhead"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Content -->
+    <section class="content-section">
+        <div class="container">
+            <h2>What You'll Learn</h2>
+            <div class="content-grid">
+                <div class="content-card">
+                    <div class="content-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3>Adobe Premiere Pro</h3>
+                    <p>Professional video editing, timeline management, color grading, and audio editing.</p>
+                </div>
+                
+                <div class="content-card">
+                    <div class="content-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3>Adobe After Effects</h3>
+                    <p>Motion graphics, visual effects, animations, and compositing techniques.</p>
+                </div>
+                
+                <div class="content-card">
+                    <div class="content-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Photo Editing</h3>
+                    <p>Adobe Lightroom, Photoshop for photos, retouching, and photo manipulation.</p>
+                </div>
+                
+                <div class="content-card">
+                    <div class="content-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Audio & Sound Design</h3>
+                    <p>Audio editing, sound effects, music composition, and audio post-production.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Modules -->
+    <section class="modules-section">
+        <div class="container">
+            <h2>Course Modules</h2>
+            <div class="modules-list">
+                <div class="module-item">
+                    <div class="module-number">1</div>
+                    <div class="module-content">
+                        <h3>Video Editing Basics</h3>
+                        <p>Premiere Pro interface, timeline editing, and basic video manipulation.</p>
+                        <span class="duration">5 hours</span>
+                    </div>
+                </div>
+                
+                <div class="module-item">
+                    <div class="module-number">2</div>
+                    <div class="module-content">
+                        <h3>Advanced Video Editing</h3>
+                        <p>Color grading, transitions, effects, and professional editing techniques.</p>
+                        <span class="duration">8 hours</span>
+                    </div>
+                </div>
+                
+                <div class="module-item">
+                    <div class="module-number">3</div>
+                    <div class="module-content">
+                        <h3>Motion Graphics</h3>
+                        <p>After Effects basics, animations, text effects, and motion graphics.</p>
+                        <span class="duration">7 hours</span>
+                    </div>
+                </div>
+                
+                <div class="module-item">
+                    <div class="module-number">4</div>
+                    <div class="module-content">
+                        <h3>Photo & Audio Editing</h3>
+                        <p>Photo editing techniques, audio post-production, and final project creation.</p>
+                        <span class="duration">6 hours</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Skilify</h4>
+                    <p>Learn the skills that matter in today's digital world.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Skills</h4>
+                    <ul>
+                        <li><a href="ui-ux.html">UI/UX Design</a></li>
+                        <li><a href="graphic-design.html">Graphic Design</a></li>
+                        <li><a href="business-finance.html">Business & Finance</a></li>
+                        <li><a href="digital-marketing.html">Digital Marketing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="editing.html">Video Editing</a></li>
+                        <li><a href="freelancing.html">Freelancing</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Skilify. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

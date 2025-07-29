@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Skilify</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Skilify</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="ui-ux.html" class="nav-link">UI/UX</a></li>
+                <li><a href="graphic-design.html" class="nav-link">Graphic Design</a></li>
+                <li><a href="business-finance.html" class="nav-link">Business</a></li>
+                <li><a href="digital-marketing.html" class="nav-link">Marketing</a></li>
+                <li><a href="editing.html" class="nav-link">Editing</a></li>
+                <li><a href="freelancing.html" class="nav-link">Freelancing</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Support Center</h1>
+                <p>Need help? We're here to support your learning journey. Find answers to common questions and get the help you need.</p>
+            </div>
+            <div class="hero-visual">
+                <div class="support-showcase">
+                    <div class="help-icons">
+                        <div class="help-icon">
+                            <i class="fas fa-question-circle"></i>
+                            <span>FAQ</span>
+                        </div>
+                        <div class="help-icon">
+                            <i class="fas fa-book"></i>
+                            <span>Guides</span>
+                        </div>
+                        <div class="help-icon">
+                            <i class="fas fa-headset"></i>
+                            <span>Live Chat</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I enroll in a course?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Simply click the "Start Course" button on any course page. You'll be guided through the enrollment process step by step.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Are the courses self-paced?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, all our courses are self-paced. You can learn at your own speed and access the content whenever it's convenient for you.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do I get a certificate after completion?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, you'll receive a certificate of completion for each course you finish. Certificates can be downloaded and shared on your professional profiles.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What if I need technical support?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our support team is available 24/7. You can reach us through live chat, email, or by submitting a support ticket.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Help Resources Section -->
+    <section class="modules-section">
+        <div class="container">
+            <h2>Help Resources</h2>
+            <div class="modules-list">
+                <div class="module-item">
+                    <div class="module-number">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div class="module-content">
+                        <h3>Video Tutorials</h3>
+                        <p>Watch step-by-step tutorials to get started with our platform and courses.</p>
+                        <button class="btn-secondary" onclick="showNotification('Opening video tutorials...', 'info')">Watch Now</button>
+                    </div>
+                </div>
+                
+                <div class="module-item">
+                    <div class="module-number">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="module-content">
+                        <h3>User Guide</h3>
+                        <p>Download our comprehensive user guide for detailed instructions and tips.</p>
+                        <button class="btn-secondary" onclick="showNotification('Downloading user guide...', 'info')">Download</button>
+                    </div>
+                </div>
+                
+                <div class="module-item">
+                    <div class="module-number">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="module-content">
+                        <h3>Community Forum</h3>
+                        <p>Connect with other learners, ask questions, and share your experiences.</p>
+                        <button class="btn-secondary" onclick="showNotification('Opening community forum...', 'info')">Join Forum</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Skilify</h4>
+                    <p>Learn the skills that matter in today's digital world.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Skills</h4>
+                    <ul>
+                        <li><a href="ui-ux.html">UI/UX Design</a></li>
+                        <li><a href="graphic-design.html">Graphic Design</a></li>
+                        <li><a href="business-finance.html">Business & Finance</a></li>
+                        <li><a href="digital-marketing.html">Digital Marketing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="editing.html">Video Editing</a></li>
+                        <li><a href="freelancing.html">Freelancing</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Skilify. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const icon = this.querySelector('i');
+                
+                // Toggle answer visibility
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    answer.style.display = 'block';
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
