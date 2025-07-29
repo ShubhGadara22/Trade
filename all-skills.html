@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Skills Learning Form - Skilify</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .skills-form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .skills-selection {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .skill-option {
+            border: 2px solid #e1e5e9;
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .skill-option:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+        }
+        
+        .skill-option.selected {
+            border-color: #667eea;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .skill-option input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .skill-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .skill-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            background: #f8f9fa;
+            color: #667eea;
+        }
+        
+        .skill-option.selected .skill-icon {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+        
+        .skill-details h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        
+        .skill-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.875rem;
+            opacity: 0.8;
+        }
+        
+        .form-section {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-section h3 {
+            margin-bottom: 1.5rem;
+            color: #2d3748;
+            font-size: 1.5rem;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #2d3748;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .priority-levels {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .priority-option {
+            flex: 1;
+            min-width: 120px;
+            padding: 0.75rem;
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .priority-option:hover {
+            border-color: #667eea;
+        }
+        
+        .priority-option.selected {
+            border-color: #667eea;
+            background: #667eea;
+            color: white;
+        }
+        
+        .submit-section {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        .btn-submit {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .btn-submit:hover {
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .priority-levels {
+                flex-direction: column;
+            }
+            
+            .skills-selection {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Skilify</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="ui-ux.html" class="nav-link">UI/UX</a></li>
+                <li><a href="graphic-design.html" class="nav-link">Graphic Design</a></li>
+                <li><a href="business-finance.html" class="nav-link">Business</a></li>
+                <li><a href="digital-marketing.html" class="nav-link">Marketing</a></li>
+                <li><a href="editing.html" class="nav-link">Editing</a></li>
+                <li><a href="freelancing.html" class="nav-link">Freelancing</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Master All Skills</h1>
+                <p>Create your personalized learning path by selecting multiple skills and setting your preferences. Build a comprehensive skill set for your career.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Form -->
+    <section class="content-section">
+        <div class="skills-form-container">
+            <form id="allSkillsForm">
+                <!-- Skills Selection -->
+                <div class="form-section">
+                    <h3><i class="fas fa-check-square"></i> Select Your Skills</h3>
+                    <p>Choose all the skills you want to learn. You can select multiple skills to create your custom learning path.</p>
+                    
+                    <div class="skills-selection">
+                        <div class="skill-option" onclick="toggleSkill(this, 'ui-ux')">
+                            <input type="checkbox" name="skills" value="ui-ux" id="skill-ui-ux">
+                            <div class="skill-header">
+                                <div class="skill-icon">
+                                    <i class="fas fa-palette"></i>
+                                </div>
+                                <div class="skill-details">
+                                    <h3>UI/UX Design</h3>
+                                    <div class="skill-meta">
+                                        <span><i class="fas fa-users"></i> 45K+ learners</span>
+                                        <span><i class="fas fa-clock"></i> 20 hours</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>Master user interface and user experience design with Figma, Adobe XD, and design principles</p>
+                        </div>
+
+                        <div class="skill-option" onclick="toggleSkill(this, 'graphic-design')">
+                            <input type="checkbox" name="skills" value="graphic-design" id="skill-graphic-design">
+                            <div class="skill-header">
+                                <div class="skill-icon">
+                                    <i class="fas fa-paint-brush"></i>
+                                </div>
+                                <div class="skill-details">
+                                    <h3>Graphic Design</h3>
+                                    <div class="skill-meta">
+                                        <span><i class="fas fa-users"></i> 38K+ learners</span>
+                                        <span><i class="fas fa-clock"></i> 18 hours</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>Create stunning visuals with Photoshop, Illustrator, and Canva. Learn branding and design theory</p>
+                        </div>
+
+                        <div class="skill-option" onclick="toggleSkill(this, 'business-finance')">
+                            <input type="checkbox" name="skills" value="business-finance" id="skill-business-finance">
+                            <div class="skill-header">
+                                <div class="skill-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="skill-details">
+                                    <h3>Business & Finance</h3>
+                                    <div class="skill-meta">
+                                        <span><i class="fas fa-users"></i> 52K+ learners</span>
+                                        <span><i class="fas fa-clock"></i> 25 hours</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>Learn entrepreneurship, financial management, and business strategy for success</p>
+                        </div>
+
+                        <div class="skill-option" onclick="toggleSkill(this, 'digital-marketing')">
+                            <input type="checkbox" name="skills" value="digital-marketing" id="skill-digital-marketing">
+                            <div class="skill-header">
+                                <div class="skill-icon">
+                                    <i class="fas fa-bullhorn"></i>
+                                </div>
+                                <div class="skill-details">
+                                    <h3>Digital Marketing</h3>
+                                    <div class="skill-meta">
+                                        <span><i class="fas fa-users"></i> 60K+ learners</span>
+                                        <span><i class="fas fa-clock"></i> 22 hours</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>Master SEO, social media marketing, content creation, and growth strategies</p>
+                        </div>
+
+                        <div class="skill-option" onclick="toggleSkill(this, 'video-editing')">
+                            <input type="checkbox" name="skills" value="video-editing" id="skill-video-editing">
+                            <div class="skill-header">
+                                <div class="skill-icon">
+                                    <i class="fas fa-cut"></i>
+                                </div>
+                                <div class="skill-details">
+                                    <h3>Video & Photo Editing</h3>
+                                    <div class="skill-meta">
+                                        <span><i class="fas fa-users"></i> 35K+ learners</span>
+                                        <span><i class="fas fa-clock"></i> 30 hours</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>Edit videos with Premiere Pro, create content with After Effects, and master photo editing</p>
+                        </div>
+
+                        <div class="skill-option" onclick="toggleSkill(this, 'freelancing')">
+                            <input type="checkbox" name="skills" value="freelancing" id="skill-freelancing">
+                            <div class="skill-header">
+                                <div class="skill-icon">
+                                    <i class="fas fa-laptop-house"></i>
+                                </div>
+                                <div class="skill-details">
+                                    <h3>Freelancing</h3>
+                                    <div class="skill-meta">
+                                        <span><i class="fas fa-users"></i> 28K+ learners</span>
+                                        <span><i class="fas fa-clock"></i> 15 hours</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>Build a successful freelance career, find clients, and manage your business remotely</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personal Information -->
+                <div class="form-section">
+                    <h3><i class="fas fa-user"></i> Personal Information</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Learning Preferences -->
+                <div class="form-section">
+                    <h3><i class="fas fa-cog"></i> Learning Preferences</h3>
+                    
+                    <div class="form-group">
+                        <label for="experience">Current Experience Level</label>
+                        <select id="experience" name="experience" required>
+                            <option value="">Select your experience level</option>
+                            <option value="beginner">Complete Beginner</option>
+                            <option value="some-experience">Some Experience</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="learningPace">Preferred Learning Pace</label>
+                        <select id="learningPace" name="learningPace" required>
+                            <option value="">Select your preferred pace</option>
+                            <option value="self-paced">Self-Paced</option>
+                            <option value="structured">Structured Schedule</option>
+                            <option value="intensive">Intensive (Fast-Track)</option>
+                            <option value="part-time">Part-Time (Evenings/Weekends)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="timeCommitment">Weekly Time Commitment</label>
+                        <select id="timeCommitment" name="timeCommitment" required>
+                            <option value="">Select time commitment</option>
+                            <option value="1-3">1-3 hours per week</option>
+                            <option value="4-7">4-7 hours per week</option>
+                            <option value="8-15">8-15 hours per week</option>
+                            <option value="16+">16+ hours per week</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Learning Priority</label>
+                        <p style="margin-bottom: 1rem; color: #666;">How would you prioritize your learning goals?</p>
+                        <div class="priority-levels">
+                            <div class="priority-option" onclick="selectPriority(this, 'career-change')">
+                                <strong>Career Change</strong><br>
+                                <small>Switch to new field</small>
+                            </div>
+                            <div class="priority-option" onclick="selectPriority(this, 'skill-upgrade')">
+                                <strong>Skill Upgrade</strong><br>
+                                <small>Enhance current skills</small>
+                            </div>
+                            <div class="priority-option" onclick="selectPriority(this, 'side-income')">
+                                <strong>Side Income</strong><br>
+                                <small>Freelance opportunities</small>
+                            </div>
+                            <div class="priority-option" onclick="selectPriority(this, 'personal-growth')">
+                                <strong>Personal Growth</strong><br>
+                                <small>Learn for interest</small>
+                            </div>
+                        </div>
+                        <input type="hidden" id="priority" name="priority" required>
+                    </div>
+                </div>
+
+                <!-- Goals and Additional Info -->
+                <div class="form-section">
+                    <h3><i class="fas fa-target"></i> Goals & Additional Information</h3>
+                    
+                    <div class="form-group">
+                        <label for="goals">What are your specific learning goals?</label>
+                        <textarea id="goals" name="goals" rows="4" placeholder="Describe what you hope to achieve with these skills..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="background">Professional Background (Optional)</label>
+                        <textarea id="background" name="background" rows="3" placeholder="Tell us about your current profession or relevant experience..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="challenges">Any specific challenges or areas you want to focus on?</label>
+                        <textarea id="challenges" name="challenges" rows="3" placeholder="What specific aspects would you like extra help with?"></textarea>
+                    </div>
+                </div>
+
+                <!-- Submit Section -->
+                <div class="submit-section">
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-rocket"></i> Create My Learning Path
+                    </button>
+                    <p style="margin-top: 1rem; color: #666;">
+                        We'll create a personalized learning plan based on your selections and send it to your email.
+                    </p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Skilify</h4>
+                    <p>Learn the skills that matter in today's digital world.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Skills</h4>
+                    <ul>
+                        <li><a href="ui-ux.html">UI/UX Design</a></li>
+                        <li><a href="graphic-design.html">Graphic Design</a></li>
+                        <li><a href="business-finance.html">Business & Finance</a></li>
+                        <li><a href="digital-marketing.html">Digital Marketing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="editing.html">Video Editing</a></li>
+                        <li><a href="freelancing.html">Freelancing</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Skilify. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle skill selection
+        function toggleSkill(element, skillId) {
+            const checkbox = element.querySelector('input[type="checkbox"]');
+            checkbox.checked = !checkbox.checked;
+            
+            if (checkbox.checked) {
+                element.classList.add('selected');
+            } else {
+                element.classList.remove('selected');
+            }
+        }
+
+        // Select learning priority
+        function selectPriority(element, priority) {
+            // Remove selected class from all priority options
+            document.querySelectorAll('.priority-option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            
+            // Add selected class to clicked option
+            element.classList.add('selected');
+            
+            // Set hidden input value
+            document.getElementById('priority').value = priority;
+        }
+
+        // Form submission
+        document.getElementById('allSkillsForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get selected skills
+            const selectedSkills = [];
+            document.querySelectorAll('input[name="skills"]:checked').forEach(skill => {
+                selectedSkills.push(skill.value);
+            });
+            
+            if (selectedSkills.length === 0) {
+                alert('Please select at least one skill to continue.');
+                return;
+            }
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = {
+                skills: selectedSkills,
+                firstName: formData.get('firstName'),
+                lastName: formData.get('lastName'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                experience: formData.get('experience'),
+                learningPace: formData.get('learningPace'),
+                timeCommitment: formData.get('timeCommitment'),
+                priority: formData.get('priority'),
+                goals: formData.get('goals'),
+                background: formData.get('background'),
+                challenges: formData.get('challenges')
+            };
+            
+            // Here you would typically send the data to your server
+            console.log('Form submitted with data:', data);
+            
+            // Show success message
+            alert(`Thank you, ${data.firstName}! We've received your learning preferences for ${selectedSkills.length} skill(s). We'll send your personalized learning plan to ${data.email} within 24 hours.`);
+            
+            // Optionally redirect or reset form
+            // window.location.href = 'thank-you.html';
+        });
+
+        // Mobile menu toggle (from existing script.js)
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+    </script>
+</body>
+</html>
