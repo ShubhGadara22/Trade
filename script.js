@@ -76,5 +76,75 @@ function startModule(moduleName) {
     showNotification(`Starting ${moduleName} module`, 'info');
 }
 
+// Login functionality
+function togglePassword() {
+    const passwordInput = document.getElementById('password');
+    const passwordIcon = document.getElementById('passwordIcon');
+    
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        passwordIcon.classList.remove('fa-eye');
+        passwordIcon.classList.add('fa-eye-slash');
+    } else {
+        passwordInput.type = 'password';
+        passwordIcon.classList.remove('fa-eye-slash');
+        passwordIcon.classList.add('fa-eye');
+    }
+}
+
+function handleLogin(event) {
+    event.preventDefault();
+    
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const remember = document.getElementById('remember').checked;
+    
+    // Simple validation
+    if (!email || !password) {
+        showNotification('Please fill in all fields', 'error');
+        return;
+    }
+    
+    // Simulate login process
+    showNotification('Signing in...', 'info');
+    
+    setTimeout(() => {
+        // Simulate successful login
+        showNotification('Login successful! Welcome back!', 'success');
+        
+        // Store login state if remember me is checked
+        if (remember) {
+            localStorage.setItem('skilify_remember', 'true');
+            localStorage.setItem('skilify_user_email', email);
+        }
+        
+        // Redirect to dashboard or home page
+        setTimeout(() => {
+            window.location.href = 'index.html';
+        }, 1500);
+    }, 1000);
+}
+
+function showSignupForm() {
+    showNotification('Signup form coming soon!', 'info');
+}
+
+// Initialize login form if it exists
+document.addEventListener('DOMContentLoaded', function() {
+    const loginForm = document.getElementById('loginForm');
+    if (loginForm) {
+        loginForm.addEventListener('submit', handleLogin);
+        
+        // Check if user chose to be remembered
+        if (localStorage.getItem('skilify_remember') === 'true') {
+            const email = localStorage.getItem('skilify_user_email');
+            if (email) {
+                document.getElementById('email').value = email;
+                document.getElementById('remember').checked = true;
+            }
+        }
+    }
+});
+
 // Export for other pages
-window.Skilify = { navigateTo, showNotification, startCourse, startModule };
+window.Skilify = { navigateTo, showNotification, startCourse, startModule, togglePassword, handleLogin, showSignupForm };
