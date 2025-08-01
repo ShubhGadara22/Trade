@@ -1,0 +1,51 @@
+{
+    "folders": [
+        {
+            "name": "Skilify Website",
+            "path": "."
+        }
+    ],
+    "settings": {
+        "editor.formatOnSave": true,
+        "editor.insertSpaces": true,
+        "editor.tabSize": 4,
+        "files.associations": {
+            "*.html": "html",
+            "*.css": "css",
+            "*.js": "javascript"
+        },
+        "emmet.includeLanguages": {
+            "html": "html",
+            "css": "css"
+        },
+        "liveServer.settings.port": 5500,
+        "liveServer.settings.CustomBrowser": "chrome",
+        "html.format.indentInnerHtml": true,
+        "css.validate": true,
+        "javascript.validate.enable": true
+    },
+    "extensions": {
+        "recommendations": [
+            "ms-vscode.vscode-json",
+            "bradlc.vscode-tailwindcss",
+            "ritwickdey.liveserver",
+            "formulahendry.auto-rename-tag",
+            "ms-vscode.vscode-css-peek",
+            "ecmel.vscode-html-css",
+            "pranaygp.vscode-css-peek"
+        ]
+    },
+    "launch": {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "Launch with Live Server",
+                "type": "node",
+                "request": "launch",
+                "program": "${workspaceFolder}/index.html",
+                "runtimeExecutable": "live-server",
+                "runtimeArgs": ["--port=5500"]
+            }
+        ]
+    }
+}
