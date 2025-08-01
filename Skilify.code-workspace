@@ -1,0 +1,46 @@
+{
+    "folders": [
+        {
+            "name": "Skilify Project",
+            "path": "."
+        }
+    ],
+    "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "liveServer.settings.port": 3000,
+        "files.associations": {
+            "*.html": "html",
+            "*.css": "css",
+            "*.js": "javascript"
+        },
+        "workbench.colorCustomizations": {
+            "activityBar.background": "#2D3748",
+            "activityBar.foreground": "#E2E8F0",
+            "statusBar.background": "#2D3748",
+            "statusBar.foreground": "#E2E8F0"
+        }
+    },
+    "extensions": {
+        "recommendations": [
+            "ms-vscode.vscode-html-css-support",
+            "esbenp.prettier-vscode",
+            "ritwickdey.liveserver",
+            "formulahendry.auto-rename-tag",
+            "christian-kohler.path-intellisense",
+            "vscode-icons-team.vscode-icons"
+        ]
+    },
+    "launch": {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "Launch Skilify Website",
+                "request": "launch",
+                "type": "chrome",
+                "url": "http://localhost:3000",
+                "webRoot": "${workspaceFolder}"
+            }
+        ]
+    }
+}

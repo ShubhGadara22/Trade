@@ -1,0 +1,170 @@
+{
+    "HTML5 Template": {
+        "scope": "html",
+        "prefix": "html5-skilify",
+        "body": [
+            "<!DOCTYPE html>",
+            "<html lang=\"en\">",
+            "<head>",
+            "    <meta charset=\"UTF-8\">",
+            "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+            "    <title>$1 - Skilify</title>",
+            "    <link rel=\"stylesheet\" href=\"style.css\">",
+            "    <link href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css\" rel=\"stylesheet\">",
+            "    <link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap\" rel=\"stylesheet\">",
+            "</head>",
+            "<body>",
+            "    $2",
+            "    <script src=\"script.js\"></script>",
+            "</body>",
+            "</html>"
+        ],
+        "description": "Skilify HTML5 template with standard includes"
+    },
+    "Skilify Navigation": {
+        "scope": "html",
+        "prefix": "nav-skilify",
+        "body": [
+            "<nav class=\"navbar\">",
+            "    <div class=\"nav-container\">",
+            "        <div class=\"nav-logo\">",
+            "            <i class=\"fas fa-graduation-cap\"></i>",
+            "            <span>Skilify</span>",
+            "        </div>",
+            "        <ul class=\"nav-menu\">",
+            "            <li><a href=\"index.html\" class=\"nav-link\">Home</a></li>",
+            "            <li><a href=\"ui-ux.html\" class=\"nav-link\">UI/UX</a></li>",
+            "            <li><a href=\"graphic-design.html\" class=\"nav-link\">Graphic Design</a></li>",
+            "            <li><a href=\"business-finance.html\" class=\"nav-link\">Business</a></li>",
+            "            <li><a href=\"digital-marketing.html\" class=\"nav-link\">Marketing</a></li>",
+            "            <li><a href=\"editing.html\" class=\"nav-link\">Editing</a></li>",
+            "            <li><a href=\"freelancing.html\" class=\"nav-link\">Freelancing</a></li>",
+            "            <li><a href=\"about.html\" class=\"nav-link\">About</a></li>",
+            "            <li><a href=\"contact.html\" class=\"nav-link\">Contact</a></li>",
+            "            <li><a href=\"support.html\" class=\"nav-link\">Support</a></li>",
+            "        </ul>",
+            "        <div class=\"hamburger\">",
+            "            <span></span>",
+            "            <span></span>",
+            "            <span></span>",
+            "        </div>",
+            "    </div>",
+            "</nav>"
+        ],
+        "description": "Skilify navigation menu"
+    },
+    "Skill Card": {
+        "scope": "html",
+        "prefix": "skill-card",
+        "body": [
+            "<div class=\"skill-card\" onclick=\"navigateTo('$1.html')\">",
+            "    <div class=\"skill-icon $2\">",
+            "        <i class=\"fas fa-$3\"></i>",
+            "    </div>",
+            "    <h3>$4</h3>",
+            "    <p>$5</p>",
+            "    <div class=\"skill-meta\">",
+            "        <span><i class=\"fas fa-users\"></i> $6+ learners</span>",
+            "        <span><i class=\"fas fa-clock\"></i> $7 hours</span>",
+            "    </div>",
+            "</div>"
+        ],
+        "description": "Skilify skill card component"
+    },
+    "Hero Section": {
+        "scope": "html",
+        "prefix": "hero-skilify",
+        "body": [
+            "<section class=\"hero\">",
+            "    <div class=\"hero-container\">",
+            "        <div class=\"hero-content\">",
+            "            <h1>$1</h1>",
+            "            <p>$2</p>",
+            "            <div class=\"hero-buttons\">",
+            "                <button class=\"btn-primary\">$3</button>",
+            "                <button class=\"btn-secondary\">$4</button>",
+            "            </div>",
+            "        </div>",
+            "        <div class=\"hero-visual\">",
+            "            $5",
+            "        </div>",
+            "    </div>",
+            "</section>"
+        ],
+        "description": "Skilify hero section"
+    },
+    "Footer": {
+        "scope": "html",
+        "prefix": "footer-skilify",
+        "body": [
+            "<footer class=\"footer\">",
+            "    <div class=\"container\">",
+            "        <div class=\"footer-content\">",
+            "            <div class=\"footer-section\">",
+            "                <h4>Skilify</h4>",
+            "                <p>Learn the skills that matter in today's digital world.</p>",
+            "                <div class=\"social-links\">",
+            "                    <a href=\"#\"><i class=\"fab fa-twitter\"></i></a>",
+            "                    <a href=\"#\"><i class=\"fab fa-linkedin\"></i></a>",
+            "                    <a href=\"#\"><i class=\"fab fa-youtube\"></i></a>",
+            "                </div>",
+            "            </div>",
+            "            <div class=\"footer-section\">",
+            "                <h4>Skills</h4>",
+            "                <ul>",
+            "                    <li><a href=\"ui-ux.html\">UI/UX Design</a></li>",
+            "                    <li><a href=\"graphic-design.html\">Graphic Design</a></li>",
+            "                    <li><a href=\"business-finance.html\">Business & Finance</a></li>",
+            "                    <li><a href=\"digital-marketing.html\">Digital Marketing</a></li>",
+            "                </ul>",
+            "            </div>",
+            "            <div class=\"footer-section\">",
+            "                <h4>Resources</h4>",
+            "                <ul>",
+            "                    <li><a href=\"editing.html\">Video Editing</a></li>",
+            "                    <li><a href=\"freelancing.html\">Freelancing</a></li>",
+            "                    <li><a href=\"about.html\">About</a></li>",
+            "                    <li><a href=\"contact.html\">Contact</a></li>",
+            "                    <li><a href=\"support.html\">Support</a></li>",
+            "                </ul>",
+            "            </div>",
+            "        </div>",
+            "        <div class=\"footer-bottom\">",
+            "            <p>&copy; 2025 Skilify. All rights reserved.</p>",
+            "        </div>",
+            "    </div>",
+            "</footer>"
+        ],
+        "description": "Skilify footer"
+    },
+    "CSS Flexbox Center": {
+        "scope": "css",
+        "prefix": "flex-center",
+        "body": [
+            "display: flex;",
+            "justify-content: center;",
+            "align-items: center;"
+        ],
+        "description": "Flexbox center alignment"
+    },
+    "CSS Grid Layout": {
+        "scope": "css",
+        "prefix": "grid-layout",
+        "body": [
+            "display: grid;",
+            "grid-template-columns: $1;",
+            "gap: $2;"
+        ],
+        "description": "CSS Grid layout"
+    },
+    "Media Query": {
+        "scope": "css",
+        "prefix": "media",
+        "body": [
+            "@media (max-width: ${1:768px}) {",
+            "    $2",
+            "}"
+        ],
+        "description": "CSS media query"
+    }
+}
