@@ -1,0 +1,41 @@
+{
+  "name": "skilify",
+  "version": "1.0.0",
+  "description": "A modern learning platform for trending skills",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx live-server --port=5500 --open=/index.html",
+    "dev": "npx live-server --port=5500 --open=/index.html --watch=.",
+    "validate": "npx html-validate *.html",
+    "format": "npx prettier --write \"**/*.{html,css,js}\"",
+    "lint:css": "npx stylelint \"**/*.css\"",
+    "build": "echo 'Building for production...' && echo 'Files are ready for deployment!'",
+    "serve": "npx http-server -p 8080 -o"
+  },
+  "keywords": [
+    "education",
+    "learning-platform",
+    "skills",
+    "ui-ux",
+    "design",
+    "freelancing",
+    "web-development"
+  ],
+  "author": "Skilify Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/skilify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/skilify/issues"
+  },
+  "homepage": "https://your-username.github.io/skilify",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "prettier": "^3.0.0",
+    "html-validate": "^8.0.0",
+    "stylelint": "^15.0.0",
+    "http-server": "^14.0.0"
+  }
+}

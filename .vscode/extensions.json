@@ -1,0 +1,14 @@
+{
+    "recommendations": [
+        "ritwickdey.liveserver",
+        "formulahendry.auto-rename-tag",
+        "ms-vscode.vscode-css-peek",
+        "ecmel.vscode-html-css",
+        "pranaygp.vscode-css-peek",
+        "bradlc.vscode-tailwindcss",
+        "ms-vscode.vscode-json",
+        "christian-kohler.path-intellisense",
+        "zignd.html-css-class-completion",
+        "ms-vscode.vscode-html-languageservice"
+    ]
+}
