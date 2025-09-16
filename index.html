@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar">
@@ -66,6 +68,23 @@
                     </div>
                 </div>
             </div>
+            <!-- Auth Sidebar (Home only) -->
+            <aside class="auth-sidebar">
+                <div class="auth-header">
+                    <div class="auth-badge"><i class="fas fa-star"></i></div>
+                    <div>
+                        <h3>Join Skilify</h3>
+                        <p>Personalized roadmap and progress tracking</p>
+                    </div>
+                </div>
+                <ul class="auth-list">
+                    <li><i class="fas fa-check"></i><span>Save courses to your library</span></li>
+                    <li><i class="fas fa-check"></i><span>Get weekly learning tips</span></li>
+                    <li><i class="fas fa-check"></i><span>Earn completion badges</span></li>
+                </ul>
+                <a href="login.html" class="btn-secondary full-width">Sign in</a>
+                <a href="signup.html" class="btn-primary full-width">Join now</a>
+            </aside>
         </div>
     </section>
 
@@ -73,8 +92,8 @@
     <section class="skills-section">
         <div class="container">
             <h2>Trending Skills 2025</h2>
-            <div class="skills-grid">
-                <div class="skill-card" onclick="navigateTo('ui-ux.html')">
+            <div class="skills-grid skills-mosaic">
+                <div class="skill-card card-big" onclick="navigateTo('ui-ux.html')">
                     <div class="skill-icon">
                         <i class="fas fa-palette"></i>
                     </div>
@@ -85,8 +104,8 @@
                         <span><i class="fas fa-clock"></i> 20 hours</span>
                     </div>
                 </div>
-                
-                <div class="skill-card" onclick="navigateTo('graphic-design.html')">
+
+                <div class="skill-card card-wide" onclick="navigateTo('graphic-design.html')">
                     <div class="skill-icon design">
                         <i class="fas fa-paint-brush"></i>
                     </div>
@@ -97,8 +116,8 @@
                         <span><i class="fas fa-clock"></i> 18 hours</span>
                     </div>
                 </div>
-                
-                <div class="skill-card" onclick="navigateTo('business-finance.html')">
+
+                <div class="skill-card card-tall" onclick="navigateTo('business-finance.html')">
                     <div class="skill-icon business">
                         <i class="fas fa-chart-line"></i>
                     </div>
@@ -109,7 +128,7 @@
                         <span><i class="fas fa-clock"></i> 25 hours</span>
                     </div>
                 </div>
-                
+
                 <div class="skill-card" onclick="navigateTo('digital-marketing.html')">
                     <div class="skill-icon marketing">
                         <i class="fas fa-bullhorn"></i>
@@ -121,7 +140,7 @@
                         <span><i class="fas fa-clock"></i> 22 hours</span>
                     </div>
                 </div>
-                
+
                 <div class="skill-card" onclick="navigateTo('editing.html')">
                     <div class="skill-icon editing">
                         <i class="fas fa-cut"></i>
@@ -133,7 +152,7 @@
                         <span><i class="fas fa-clock"></i> 30 hours</span>
                     </div>
                 </div>
-                
+
                 <div class="skill-card" onclick="navigateTo('freelancing.html')">
                     <div class="skill-icon freelancing">
                         <i class="fas fa-laptop-house"></i>
@@ -213,4 +232,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

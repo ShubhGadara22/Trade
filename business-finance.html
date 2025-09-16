@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar">
@@ -68,7 +70,7 @@
                     <h3>Entrepreneurship</h3>
                     <p>Start and scale businesses, develop business plans, and understand market dynamics.</p>
                 </div>
-                
+
                 <div class="content-card">
                     <div class="content-icon">
                         <i class="fas fa-calculator"></i>
@@ -76,7 +78,7 @@
                     <h3>Financial Management</h3>
                     <p>Budgeting, financial planning, investment strategies, and personal finance management.</p>
                 </div>
-                
+
                 <div class="content-card">
                     <div class="content-icon">
                         <i class="fas fa-chart-bar"></i>
@@ -84,7 +86,7 @@
                     <h3>Business Strategy</h3>
                     <p>Strategic planning, market analysis, competitive positioning, and business growth.</p>
                 </div>
-                
+
                 <div class="content-card">
                     <div class="content-icon">
                         <i class="fas fa-coins"></i>
@@ -109,7 +111,7 @@
                         <span class="duration">4 hours</span>
                     </div>
                 </div>
-                
+
                 <div class="module-item">
                     <div class="module-number">2</div>
                     <div class="module-content">
@@ -118,7 +120,7 @@
                         <span class="duration">6 hours</span>
                     </div>
                 </div>
-                
+
                 <div class="module-item">
                     <div class="module-number">3</div>
                     <div class="module-content">
@@ -127,7 +129,7 @@
                         <span class="duration">5 hours</span>
                     </div>
                 </div>
-                
+
                 <div class="module-item">
                     <div class="module-number">4</div>
                     <div class="module-content">
@@ -184,26 +186,27 @@
         function drawBusinessChart() {
             const canvas = document.getElementById('businessChart');
             const ctx = canvas.getContext('2d');
-            
+
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            
+
             // Draw bar chart
             const data = [30, 45, 60, 75, 90, 85, 95];
             const width = canvas.width;
             const height = canvas.height;
             const barWidth = width / data.length;
-            
+
             ctx.fillStyle = '#4ecdc4';
             data.forEach((value, index) => {
                 const barHeight = (value / 100) * height;
                 const x = index * barWidth + barWidth * 0.1;
                 const y = height - barHeight;
-                
+
                 ctx.fillRect(x, y, barWidth * 0.8, barHeight);
             });
         }
-        
+
         drawBusinessChart();
     </script>
 </body>
+
 </html>

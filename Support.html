@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Skilify</title>
+    <title>Support - Skilify</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -26,7 +26,7 @@
                 <li><a href="digital-marketing.html" class="nav-link">Marketing</a></li>
                 <li><a href="editing.html" class="nav-link">Editing</a></li>
                 <li><a href="freelancing.html" class="nav-link">Freelancing</a></li>
-                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger">
@@ -41,23 +41,23 @@
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1>About Skilify</h1>
-                <p>We're passionate about helping people learn the skills that matter in today's digital world. Our mission is to make quality education accessible to everyone.</p>
+                <h1>Support Center</h1>
+                <p>Need help? We're here to support your learning journey. Find answers to common questions and get the help you need.</p>
             </div>
             <div class="hero-visual">
-                <div class="about-showcase">
-                    <div class="stats">
-                        <div class="stat">
-                            <h3>10K+</h3>
-                            <p>Students</p>
+                <div class="support-showcase">
+                    <div class="help-icons">
+                        <div class="help-icon">
+                            <i class="fas fa-question-circle"></i>
+                            <span>FAQ</span>
                         </div>
-                        <div class="stat">
-                            <h3>50+</h3>
-                            <p>Courses</p>
+                        <div class="help-icon">
+                            <i class="fas fa-book"></i>
+                            <span>Guides</span>
                         </div>
-                        <div class="stat">
-                            <h3>95%</h3>
-                            <p>Success Rate</p>
+                        <div class="help-icon">
+                            <i class="fas fa-headset"></i>
+                            <span>Live Chat</span>
                         </div>
                     </div>
                 </div>
@@ -65,78 +65,89 @@
         </div>
     </section>
 
-    <!-- Mission Section -->
+    <!-- FAQ Section -->
     <section class="content-section">
         <div class="container">
-            <h2>Our Mission</h2>
-            <div class="content-grid">
-                <div class="content-card">
-                    <div class="content-icon">
-                        <i class="fas fa-graduation-cap"></i>
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I enroll in a course?</h3>
+                        <i class="fas fa-chevron-down"></i>
                     </div>
-                    <h3>Quality Education</h3>
-                    <p>We provide high-quality, practical courses designed by industry experts to help you succeed in your career.</p>
+                    <div class="faq-answer">
+                        <p>Simply click the "Start Course" button on any course page. You'll be guided through the enrollment process step by step.</p>
+                    </div>
                 </div>
 
-                <div class="content-card">
-                    <div class="content-icon">
-                        <i class="fas fa-users"></i>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Are the courses self-paced?</h3>
+                        <i class="fas fa-chevron-down"></i>
                     </div>
-                    <h3>Community</h3>
-                    <p>Join a community of learners, share experiences, and network with professionals in your field.</p>
+                    <div class="faq-answer">
+                        <p>Yes, all our courses are self-paced. You can learn at your own speed and access the content whenever it's convenient for you.</p>
+                    </div>
                 </div>
 
-                <div class="content-card">
-                    <div class="content-icon">
-                        <i class="fas fa-rocket"></i>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do I get a certificate after completion?</h3>
+                        <i class="fas fa-chevron-down"></i>
                     </div>
-                    <h3>Career Growth</h3>
-                    <p>Our courses are designed to help you build practical skills and advance your career in the digital economy.</p>
+                    <div class="faq-answer">
+                        <p>Yes, you'll receive a certificate of completion for each course you finish. Certificates can be downloaded and shared on your professional profiles.</p>
+                    </div>
                 </div>
 
-                <div class="content-card">
-                    <div class="content-icon">
-                        <i class="fas fa-globe"></i>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What if I need technical support?</h3>
+                        <i class="fas fa-chevron-down"></i>
                     </div>
-                    <h3>Global Access</h3>
-                    <p>Learn from anywhere in the world with our online platform and flexible learning options.</p>
+                    <div class="faq-answer">
+                        <p>Our support team is available 24/7. You can reach us through live chat, email, or by submitting a support ticket.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Team Section -->
+    <!-- Help Resources Section -->
     <section class="modules-section">
         <div class="container">
-            <h2>Our Team</h2>
+            <h2>Help Resources</h2>
             <div class="modules-list">
                 <div class="module-item">
                     <div class="module-number">
-                        <i class="fas fa-user"></i>
+                        <i class="fas fa-video"></i>
                     </div>
                     <div class="module-content">
-                        <h3>Expert Instructors</h3>
-                        <p>Learn from industry professionals with years of experience in their respective fields.</p>
+                        <h3>Video Tutorials</h3>
+                        <p>Watch step-by-step tutorials to get started with our platform and courses.</p>
+                        <button class="btn-secondary" onclick="showNotification('Opening video tutorials...', 'info')">Watch Now</button>
                     </div>
                 </div>
 
                 <div class="module-item">
                     <div class="module-number">
-                        <i class="fas fa-cog"></i>
+                        <i class="fas fa-file-alt"></i>
                     </div>
                     <div class="module-content">
-                        <h3>Support Team</h3>
-                        <p>Our dedicated support team is here to help you succeed in your learning journey.</p>
+                        <h3>User Guide</h3>
+                        <p>Download our comprehensive user guide for detailed instructions and tips.</p>
+                        <button class="btn-secondary" onclick="showNotification('Downloading user guide...', 'info')">Download</button>
                     </div>
                 </div>
 
                 <div class="module-item">
                     <div class="module-number">
-                        <i class="fas fa-lightbulb"></i>
+                        <i class="fas fa-comments"></i>
                     </div>
                     <div class="module-content">
-                        <h3>Content Creators</h3>
-                        <p>Our content team creates engaging, up-to-date courses that reflect current industry trends.</p>
+                        <h3>Community Forum</h3>
+                        <p>Connect with other learners, ask questions, and share your experiences.</p>
+                        <button class="btn-secondary" onclick="showNotification('Opening community forum...', 'info')">Join Forum</button>
                     </div>
                 </div>
             </div>
@@ -182,6 +193,24 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const icon = this.querySelector('i');
+
+                // Toggle answer visibility
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    answer.style.display = 'block';
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
