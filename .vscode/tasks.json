@@ -1,0 +1,76 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start HTTP Server",
+            "type": "shell",
+            "command": "python3",
+            "args": ["-m", "http.server", "3000"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "new"
+            },
+            "isBackground": true,
+            "problemMatcher": []
+        },
+        {
+            "label": "Format HTML Files",
+            "type": "shell",
+            "command": "find",
+            "args": [".", "-name", "*.html", "-exec", "prettier", "--write", "{}", ";"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Format CSS Files",
+            "type": "shell",
+            "command": "find",
+            "args": [".", "-name", "*.css", "-exec", "prettier", "--write", "{}", ";"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Format JS Files",
+            "type": "shell",
+            "command": "find",
+            "args": [".", "-name", "*.js", "-exec", "prettier", "--write", "{}", ";"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Open in Browser",
+            "type": "shell",
+            "command": "xdg-open",
+            "args": ["http://localhost:3000"],
+            "group": "test",
+            "presentation": {
+                "echo": false,
+                "reveal": "never",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
